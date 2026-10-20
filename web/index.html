@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Staking vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Literata:opsz,wght@7..72,560&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <p class="eyebrow">Local chain · click to run</p>
+      <h1>Staking vault</h1>
+      <p class="lede">
+        Alice deposits 100 PTK and Bob deposits 300. Rewards stream at one RWD per second
+        and split by deposit size. Bob should earn about three times what Alice earns.
+      </p>
+      <p id="status" class="lede">Reading the local chain…</p>
+      <section class="cards">
+        <article>
+          <p class="label">Alice staked</p>
+          <p id="alice-stake" class="amount">—</p>
+        </article>
+        <article>
+          <p class="label">Bob staked</p>
+          <p id="bob-stake" class="amount">—</p>
+        </article>
+        <article>
+          <p class="label">Alice earned</p>
+          <p id="alice-earned" class="amount">—</p>
+        </article>
+        <article>
+          <p class="label">Bob earned</p>
+          <p id="bob-earned" class="amount">—</p>
+        </article>
+      </section>
+      <div class="actions">
+        <button id="fund" type="button">1. Fund rewards</button>
+        <button id="alice" type="button">2. Alice stakes 100</button>
+        <button id="bob" type="button">3. Bob stakes 300</button>
+        <button id="advance" type="button">4. Advance 100 seconds</button>
+      </div>
+      <p id="note" class="note"></p>
+      <footer>
+        Also open the
+        <a href="http://localhost:5174">capped token</a>
+        and the
+        <a href="http://localhost:5176">mini exchange</a>.
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
